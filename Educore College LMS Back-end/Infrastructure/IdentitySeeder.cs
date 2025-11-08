@@ -21,8 +21,8 @@ namespace Educore_College_LMS_Back_end.Infrastructure
 
             }
 
-            string adminEmail = "admin@educore.ac.za";
-            string adminPassword = "Admin@123";
+            string adminEmail = "";
+            string adminPassword = "";
 
             var adminUser = await userManager.FindByEmailAsync(adminEmail);
             if(adminUser == null)
