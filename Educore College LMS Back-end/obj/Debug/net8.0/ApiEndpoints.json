@@ -1,0 +1,757 @@
+[
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "GetAllCourses",
+    "RelativePath": "api/Admin/courses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AddCourse",
+    "RelativePath": "api/Admin/courses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "coursedto",
+        "Type": "Educore_College_LMS_Back_end.DTOs.CourseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AssignLecturerToCourse",
+    "RelativePath": "api/Admin/courses/{courseId}/assign-lecturer/{lecturerId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "lecturerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AssignStudentToCourse",
+    "RelativePath": "api/Admin/courses/{courseId}/assign-student/{studentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "GetStudentsInCourse",
+    "RelativePath": "api/Admin/courses/{courseId}/students",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "UpdateCourse",
+    "RelativePath": "api/Admin/courses/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.AdminController\u002BUpdateCourseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "DeleteCourse",
+    "RelativePath": "api/Admin/courses/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "GetAllLecturers",
+    "RelativePath": "api/Admin/lecturers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AddLecturer",
+    "RelativePath": "api/Admin/lecturers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lecturerdto",
+        "Type": "Educore_College_LMS_Back_end.DTOs.LecturerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "UpdateLecturer",
+    "RelativePath": "api/Admin/lecturers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.AdminController\u002BUpdateLecturerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "DeleteLecturer",
+    "RelativePath": "api/Admin/lecturers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "SearchLecturers",
+    "RelativePath": "api/Admin/lecturers/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "GetAllModules",
+    "RelativePath": "api/Admin/modules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AddModule",
+    "RelativePath": "api/Admin/modules",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduledto",
+        "Type": "Educore_College_LMS_Back_end.DTOs.ModuleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "UpdateModule",
+    "RelativePath": "api/Admin/modules/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.AdminController\u002BUpdateModuleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "DeleteModule",
+    "RelativePath": "api/Admin/modules/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AssignLecturerToModule",
+    "RelativePath": "api/Admin/modules/{moduleId}/assign-lecturer/{lecturerId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "lecturerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AssignStudentToModule",
+    "RelativePath": "api/Admin/modules/{moduleId}/assign-student/{studentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "GetAllStudents",
+    "RelativePath": "api/Admin/students",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "AddStudent",
+    "RelativePath": "api/Admin/students",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.DTOs.StudentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "UpdateStudent",
+    "RelativePath": "api/Admin/students/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.AdminController\u002BUpdateStudentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/Admin/students/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "GetCoursesOfStudent",
+    "RelativePath": "api/Admin/students/{studentId}/courses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AdminController",
+    "Method": "SearchStudents",
+    "RelativePath": "api/Admin/students/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AuthController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Auth/change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/Auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Educore_College_LMS_Back_end.Controllers.RefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.ResetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.LecturerController",
+    "Method": "GetLecturerCourses",
+    "RelativePath": "api/Lecturer/courses/{lecturerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lecturerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.LecturerController",
+    "Method": "GetAssignedModulesByCourse",
+    "RelativePath": "api/Lecturer/courses/{lecturerId}/{courseId}/modules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lecturerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "courseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.LecturerController",
+    "Method": "GetLecturerInfo",
+    "RelativePath": "api/Lecturer/lecturers/{lecturerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lecturerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.LecturerController",
+    "Method": "CreateTask",
+    "RelativePath": "api/Lecturer/modules/{moduleId}/tasks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "task",
+        "Type": "Educore_College_LMS_Back_end.Domain.Tasks.TaskItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.LecturerController",
+    "Method": "GetTasksByModule",
+    "RelativePath": "api/Lecturer/modules/{moduleId}/tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.LecturerController",
+    "Method": "UpdateTask",
+    "RelativePath": "api/Lecturer/tasks/{taskId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedTask",
+        "Type": "Educore_College_LMS_Back_end.Domain.Tasks.TaskItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.LecturerController",
+    "Method": "DeleteTask",
+    "RelativePath": "api/Lecturer/tasks/{taskId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.PasswordController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Password/forgot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.PasswordController\u002BForgotPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.PasswordController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Password/reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.PasswordController\u002BResetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.StudentController",
+    "Method": "GetEnrolledCourses",
+    "RelativePath": "api/Student/{studentId}/courses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.StudentController",
+    "Method": "GetStudentModules",
+    "RelativePath": "api/Student/{studentId}/modules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.StudentController",
+    "Method": "GetTasksForStudent",
+    "RelativePath": "api/Student/{studentId}/tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.StudentController",
+    "Method": "UpdateTaskStatus",
+    "RelativePath": "api/Student/{studentId}/tasks/{taskId}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "taskId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Educore_College_LMS_Back_end.Controllers.StudentController\u002BUpdateTaskStatusDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.StudentController",
+    "Method": "FilterTasks",
+    "RelativePath": "api/Student/{studentId}/tasks/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.StudentController",
+    "Method": "GetCourse",
+    "RelativePath": "api/Student/courses/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educore_College_LMS_Back_end.Controllers.StudentController",
+    "Method": "GetStudentInfo",
+    "RelativePath": "api/Student/students/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
