@@ -1,14 +1,14 @@
 EduCore College Learning Management API
 
-EduCore is a RESTful API for managing college learning management tasks, built with ASP.NET Web API, ASP.NET Identity, JWT authentication, Azure SQL, Entity Framework, and SMTP email notifications.
+EduCore is a RESTful API for managing college learning management tasks. It supports role-based users (Admin, Lecturer, Student), secure authentication, course management, enrollment tracking, and email notifications.
 
-#Features:
+✨ Features
 
 Role-based user management: Admin, Lecturer, Student via ASP.NET Identity
 
-User login
+User login and password management
 
-Course creation, updates, and retrieval (Lecturer/Admin)
+Course creation and retrieval (Lecturer/Admin)
 
 Student enrollment and progress tracking (Student/Admin)
 
@@ -16,280 +16,93 @@ JWT-secured endpoints for role-based access
 
 Email notifications via SMTP
 
-Database management with Entity Framework migrations
+Database management with Entity Framework Core migrations
 
-#Tech Stack:
+🛠 Tech Stack
+Backend	ASP.NET Web API
+Authentication	ASP.NET Identity + JWT
+Database	Azure SQL (EF Core migrations)
+Email Service	SMTP
+Documentation	Swagger (OpenAPI)
 
-Backend: ASP.NET Web API
-
-Authentication: ASP.NET Identity + JWT
-
-Database: Azure SQL (EF Core for migrations)
-
-Email Service: SMTP
-Documentation: Swagger (OpenApi) for testing
-
-Setup
-
-Clone repo:
-
+⚡ Setup
+1. Clone the repository
 git clone https://github.com/yourusername/educore-api.git
 cd educore-api
 
-
-Restore & build:
-
+2. Restore & build
 dotnet restore
 dotnet build
 
+3. Configure your appsettings.json
 
-Configure appsettings.json with your DB, JWT, and SMTP settings.
+Add your DB connection string, JWT settings, and SMTP configuration.
 
-Apply EF migrations:
-
+4. Apply EF migrations
 dotnet ef database update
 
-
-Run API:
-
+5. Run API
 dotnet run
 
+6. Swagger Documentation
 
-Access Swagger: https://localhost:5001/swagger
+Access at:
 
-API Endpoints: 
+https://localhost:5001/swagger
 
+🔑 API Endpoints
 Admin
 
+CRUD operations for students, lecturers, courses, modules
 
-GET
-/api/Admin/students
+Assign lecturers or students to courses/modules
 
+Get course enrollments, student courses, and search endpoints
 
+Examples:
 
-POST
-/api/Admin/students
-
-
-
-PUT
-/api/Admin/students/{id}
-
-
-
-DELETE
-/api/Admin/students/{id}
-
-
-
-GET
-/api/Admin/lecturers
-
-
-
-POST
-/api/Admin/lecturers
-
-
-
-PUT
-/api/Admin/lecturers/{id}
-
-
-
-DELETE
-/api/Admin/lecturers/{id}
-
-
-
-GET
-/api/Admin/courses
-
-
-
-POST
-/api/Admin/courses
-
-
-
-PUT
-/api/Admin/courses/{id}
-
-
-
-DELETE
-/api/Admin/courses/{id}
-
-
-
-GET
-/api/Admin/modules
-
-
-
-POST
-/api/Admin/modules
-
-
-
-PUT
-/api/Admin/modules/{id}
-
-
-
-DELETE
-/api/Admin/modules/{id}
-
-
-
-POST
-/api/Admin/courses/{courseId}/assign-lecturer/{lecturerId}
-
-
-
-POST
-/api/Admin/modules/{moduleId}/assign-lecturer/{lecturerId}
-
-
-
-POST
-/api/Admin/courses/{courseId}/assign-student/{studentId}
-
-
-
-POST
-/api/Admin/modules/{moduleId}/assign-student/{studentId}
-
-
-
-GET
-/api/Admin/courses/{courseId}/students
-
-
-
-GET
-/api/Admin/students/{studentId}/courses
-
-
-
-GET
-/api/Admin/students/search
-
-
-
-GET
-/api/Admin/lecturers/search
-
+GET /api/Admin/students
+POST /api/Admin/courses
+POST /api/Admin/courses/{courseId}/assign-lecturer/{lecturerId}
+GET /api/Admin/students/{studentId}/courses
 
 Auth
-
-
-POST
-/api/Auth/login
-
-
-
-POST
-/api/Auth/change-password
-
-
-
-POST
-/api/Auth/reset-password
-
-
-
-POST
-/api/Auth/refresh
-
+POST /api/Auth/login
+POST /api/Auth/change-password
+POST /api/Auth/reset-password
+POST /api/Auth/refresh
 
 Lecturer
 
+View own courses and modules
 
-GET
-/api/Lecturer/lecturers/{lecturerId}
+Manage tasks within modules
 
+Examples:
 
-
-GET
-/api/Lecturer/courses/{lecturerId}
-
-
-
-GET
-/api/Lecturer/courses/{lecturerId}/{courseId}/modules
-
-
-
-POST
-/api/Lecturer/modules/{moduleId}/tasks
-
-
-
-GET
-/api/Lecturer/modules/{moduleId}/tasks
-
-
-
-PUT
-/api/Lecturer/tasks/{taskId}
-
-
-
-DELETE
-/api/Lecturer/tasks/{taskId}
-
-
-Password
-
-
-POST
-/api/Password/forgot
-
-
-
-POST
-/api/Password/reset
-
+GET /api/Lecturer/courses/{lecturerId}
+POST /api/Lecturer/modules/{moduleId}/tasks
+PUT /api/Lecturer/tasks/{taskId}
 
 Student
 
+View own courses, modules, and tasks
 
-GET
-/api/Student/students/{studentId}
+Update task status
 
+Examples:
 
+GET /api/Student/{studentId}/courses
+PUT /api/Student/{studentId}/tasks/{taskId}/status
 
-GET
-/api/Student/{studentId}/courses
-
-
-
-GET
-/api/Student/{studentId}/modules
-
-
-
-GET
-/api/Student/{studentId}/tasks
-
-
-
-GET
-/api/Student/courses/{courseId}
-
-
-
-PUT
-/api/Student/{studentId}/tasks/{taskId}/status
-
-
-
-GET
-/api/Student/{studentId}/tasks/filter
 
 Note: JWT is required for protected routes via Authorization: Bearer <token> header.
 
-License
+🎯 Roles & Permissions
+Role	Permissions
+Admin	Full access: manage users, courses, enrollments
+Lecturer	Manage courses & tasks, view enrollments
+Student	View courses, modules, tasks, update own tasks
+📦 License
 
-MIT License
+MIT License – See LICENSE
